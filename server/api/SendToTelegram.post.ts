@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
   const { name, email, msg } = await readBody(event)
 
   // Build the message to send to Telegram
-  const message = `📩 New Submission:\n\n👤 Name: ${name}\n📧 Email: ${email} \n ${msg}`
+  const message = `📩 New Submission:\n\n👤 Name: ${name}\n📧 Email: ${email} \n✏️ Message: ${msg}`
 
   // Retrieve credentials from runtime config
   const config = useRuntimeConfig()

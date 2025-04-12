@@ -1,14 +1,14 @@
 <template>
   <div id="contact" class="container">
     <Title class="mb-[2vw]">LET'S CRAFT SOLUTION 🚀</Title>
-    <form @submit.prevent="sendToTelegram" class="flex flex-col md:flex-row items-stretch w-full mb-[5vw] md:mb-[1vw]">
+    <form class="flex flex-col md:flex-row items-stretch w-full mb-[5vw] md:mb-[1vw]" @submit.prevent="sendToTelegram">
       <div class="w-full md:w-[70%]">
         <input v-model="form.name" type="text"
           class="text-[5vw] md:text-[1.5vw] p-5 block w-full outline outline-foreground/20 rounded-md"
-          placeholder="YOUR NAME" required />
-        <input v-model="form.email" type="text"
+          placeholder="YOUR NAME" required>
+        <input v-model="form.email" type="mail"
           class="text-[5vw] md:text-[1.5vw] p-5 block w-full outline outline-foreground/20 rounded-md"
-          placeholder="YOUR EMAIL" required />
+          placeholder="YOUR EMAIL" required>
         <textarea v-model="form.msg"
           class="w-full text-[4vw] md:text-[1.5vw] p-5 rounded-md outline outline-foreground/20"
           placeholder="YOUR MESSAGE" />
@@ -67,7 +67,7 @@ const sendToTelegram = async () => {
       body: form
     })
     if (res.ok) {
-      message.value = 'Message send successfully!'
+      message.value = 'Message sent successfully!'
       messageType.value = 'good'
       form.name = ''
       form.email = ''
