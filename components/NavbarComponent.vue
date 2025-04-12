@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed top-0 left-1/2 -translate-x-1/2 w-[95vw] md:w-auto py-[1vw] z-50">
     <div
-      class="flex items-center justify-between gap-[2vw] bg-primary/20 backdrop-blur-lg rounded-xl md:rounded-full px-5 py-2">
+      class="flex items-center justify-between gap-[2vw] bg-primary/20 backdrop-blur-lg rounded-xl md:rounded-full px-5 py-2 shadow-inner">
       <NuxtLink to="#hero" class="w-[10vw] md:w-[3vw]">
         <NuxtImg src="/2.png" alt="logo" />
       </NuxtLink>
